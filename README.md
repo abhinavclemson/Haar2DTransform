@@ -1,5 +1,5 @@
 
-# Basic image convolution and edge detection
+# Discrete wavelet transform (DWT)
 
 
 	Name: ABHINAV SINGH 
