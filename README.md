@@ -59,6 +59,7 @@ User can provide levels to the DWT module as well as levels to the Inverse DWT  
 	for example: </br>
 	python DWT.py Images/mandrill.ppm
 10. Program would ask for number of levels and inverse levels. Inverse levels are the levels to which the user want the image to be restored, if no input is provided, image would be restored to its former-self.
+11. The output would be in the directory **Output/**.
 
 	
 	
@@ -72,6 +73,15 @@ User can provide levels to the DWT module as well as levels to the Inverse DWT  
 * [Python 3.0.x](https://www.python.org/download/releases/3.0/)
 * [NumPy](https://numpy.org/)
 * [Pillow](https://pillow.readthedocs.io/en/stable/)
+* command for installling Pillow in clemson virtual machines that worked:</br>
+	python3 -m pip install Pillow
+
+* command for installling Numpy in clemson virtual machines that worked:</br>
+		pip3 install numpy
+
+	
+	
+		
 
 
 ## Technologies
