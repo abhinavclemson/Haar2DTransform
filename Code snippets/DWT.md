@@ -1,9 +1,13 @@
+
+
+```python
 import array
 import os
 import sys
 import numpy as np
 import math 
 from PIL import Image
+
 
 class DWT:
     def __init__(self):
@@ -12,6 +16,7 @@ class DWT:
         self.height=0
         self.width=0
 
+        
         
       
     def Imagebase2(self,arr):
@@ -140,7 +145,8 @@ class DWT:
                     data[i][j]=result[i][j]
             
             
-
+            #width= width//2
+           # height= height//2
             levels-=1
             
             
@@ -310,9 +316,9 @@ class DWT:
 
 if __name__=='__main__':
     #assigning file location to file
-    filename = sys.argv[1]
-    file=filename
-    
+    file='Images/Grey_lena.ppm'
+
+
     
     #creating a DWT() object to operate all image operations using it
     new_obj=DWT()
@@ -320,7 +326,7 @@ if __name__=='__main__':
     #allocate image of given size, returns 3-D array representation of ppm file 
     cimg = new_obj.ppm_read(file)
     
-    #allocate 3-D ppm colored image to 2-D pgm grey scale image
+    #Converting 3-D ppm colored image to 2-D pgm grey scale image
     gimg = new_obj.ppm_togrey(cimg)
 
     #Converting length of image height and width into powers of 2s
@@ -342,7 +348,7 @@ if __name__=='__main__':
     while True:
       try:
         print('Inverse levels are less than or equal to levels provided for DWT, including 0 to levels\n')
-        print('Provide levels for inverse Haar Wavelet transform, otherwise inverse level would assumed to be equal to value of levels:')
+        print('Provide levels for inverse Haar Wavelet transform, otherwise inverse level would assumed to be equal to value of levels:')        
         invlevels=int(input())
         if type(levels)==int and 0<=invlevels<=levels :
             break
@@ -371,3 +377,70 @@ if __name__=='__main__':
             
 
         
+```
+
+    Provide levels for Haar Wavelet transform:
+
+
+     3
+
+
+    
+    
+    Inverse levels are less than or equal to levels provided for DWT, including 0 to levels
+    
+    Provide levels for inverse Haar Wavelet transform, otherwise inverse level would assumed to be equal to value of levels:
+
+
+     
+
+
+    Inverse levels is assumed:  3
+
+
+
+```python
+from PIL import Image
+Image.open('Output/dgrey.pgm')
+```
+
+
+
+
+![png](output_1_0.png)
+
+
+
+
+```python
+Image.open('Output/ngrey.pgm')
+```
+
+
+
+
+![png](output_2_0.png)
+
+
+
+
+```python
+Image.open('Output/grey.pgm')
+```
+
+
+
+
+![png](output_3_0.png)
+
+
+
+
+```python
+
+```
+
+
+```python
+
+```
